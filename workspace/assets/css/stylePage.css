@@ -1,0 +1,747 @@
+/* TITLE: Configuraciones Paginación*/
+
+html {
+    zoom: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    position: absolute;
+    overflow: auto;
+    width: auto;
+    height: auto;
+}
+
+#page {
+    position: absolute;
+    height: 76vh;
+}
+
+
+/* TITLE: Menú Lateral*/
+
+#latMenu {
+    height: 83.6vh;
+    float: left;
+    background-color: #ece2c6;
+    position: absolute;
+    width: 12vw;
+}
+
+#latMenu #menu_list {
+    margin: 0vh;
+    padding: 0vh;
+    text-decoration: none;
+    color: #333;
+    font-size: 2.5vh;
+    list-style: none;
+    font-weight: bold;
+}
+
+#latMenu #menu_list li {
+    text-decoration: none;
+    padding: 2.3vh 0.8vw 2.3vh 0.8vw;
+    border-bottom: 0.15vh solid white;
+}
+
+#latMenu #menu_list li:hover {
+    background-color: #e8d195;
+    transition: .5s;
+    padding-left: 1vw;
+}
+
+#textbot {
+    position: absolute;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    font-size: 1.8vh;
+    font-weight: lighter;
+    bottom: 0vh;
+    text-align: center;
+    left: 0;
+    width: 100%;
+}
+
+
+/* TITLE: Area de Trabajo General*/
+
+.dashboard {
+    left: 12vw;
+    background-image: url(../../images/ESPAC.jpg);
+    background-size: 100%;
+    background-position: center;
+    overflow: hidden;
+    height: 83.48vh;
+    width: 87.77vw;
+    position: absolute;
+    border-left: 0.14vw solid white;
+}
+
+.dashboard #backd {
+    /*INICIO*/
+    border-radius: 0.5em;
+    color: #333;
+    position: absolute;
+    background-color: #ece2c6;
+    text-align: center;
+    padding: 7vh;
+    border: 0.2vh solid #ece2c6;
+    top: 12vh;
+    left: 25vw;
+    right: 25vw;
+    bottom: 10.75vh;
+}
+
+.dashboard #backa {
+    /*ADMINISTRACIÓN*/
+    border-radius: 0.5em;
+    color: #333;
+    position: absolute;
+    background-color: #ece2c6;
+    text-align: center;
+    padding: 7.49vh;
+    border: 0.2vh solid #ece2c6;
+    top: 8vh;
+    left: 8vw;
+    bottom: 8vh;
+    right: 8vw;
+}
+
+.dashboard .backc {
+    /*gestionCatequista*/
+    border-radius: 0.5em;
+    color: #333;
+    position: absolute;
+    background-color: #ece2c6;
+    text-align: center;
+    padding: 7vh;
+    border: 0.2vh solid #ece2c6;
+    top: 17vh;
+    left: 1.34vw;
+    right: 1.34vw;
+    max-height: 50vh;
+    overflow: auto;
+}
+
+.dashboard .backf {
+    /*gestionGrupo*/
+    border-radius: 0.5em;
+    color: #333;
+    position: absolute;
+    background-color: #ece2c6;
+    text-align: center;
+    padding: 7vh;
+    border: 0.2vh solid #ece2c6;
+    top: 17vh;
+    left: 18vw;
+    right: 18vw;
+    max-height: 50vh;
+    overflow: auto;
+}
+
+.dashboard #backi {
+    /*Generación de INFORMES*/
+    border-radius: 0.5em;
+    color: #333;
+    position: absolute;
+    background-color: #ece2c6;
+    text-align: center;
+    padding: 7.49vh;
+    border: 0.2vh solid #ece2c6;
+    top: 8vh;
+    left: 8vw;
+    bottom: 8vh;
+    right: 8vw;
+}
+
+.dashboard #backq {
+    border-radius: 0.5em;
+    color: #333;
+    position: absolute;
+    background-color: #ece2c6;
+    text-align: center;
+    padding: 4.49vh;
+    border: 0.2vh solid #ece2c6;
+    top: 8vh;
+    left: 8vw;
+    bottom: 8vh;
+    right: 8vw;
+}
+
+.dashboard .backz {
+    /*gestionParroquia*/
+    border-radius: 0.5em;
+    color: #333;
+    position: absolute;
+    background-color: #ece2c6;
+    text-align: center;
+    padding: 7vh;
+    border: 0.2vh solid #ece2c6;
+    top: 17vh;
+    left: 1vw;
+    right: 1vw;
+    max-height: 50vh;
+    overflow: auto;
+}
+
+.dashboard #titles {
+    position: relative;
+    color: #333;
+    font-weight: 800;
+    font-size: 2.5vh;
+}
+
+.dashboard #formconsulta input[type="text"] {
+    font-family: 'Lato', sans-serif;
+    outline: none;
+    padding: 6px;
+    display: inline-block;
+    width: 220px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    margin: 6.5px 2px 6.5px 2px;
+    font-size: 12.5px;
+    height: 18px;
+}
+
+.dashboard #formconsulta select {
+    font-family: 'Lato', sans-serif;
+    outline: none;
+    padding: 6px;
+    display: inline-block;
+    width: 300px;
+    color: #787878;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    margin: 6.5px 2px 6.5px 2px;
+    /*UP-RIGHT-DOWN-LEFT*/
+}
+
+.refreshButtom img {
+    height: 4.5vh;
+}
+
+.refreshButtom {
+    position: absolute;
+    padding: 0.5vw 0 0.5vw 0;
+    margin: 0;
+    background: #ece2c6;
+    width: 6vw;
+    border: 0;
+    border-radius: 0.3em;
+    cursor: pointer;
+    top: 5vh;
+    left: 18vh;
+}
+
+
+/*El boton de Send cuando se acerca el Cursor*/
+
+.refreshButtom:hover {
+    background-color: #e0c67b;
+    transition: .5s;
+}
+
+.backButtom img {
+    height: 4.5vh;
+}
+
+.backButtom {
+    position: absolute;
+    padding: 0.5vw 0 0.5vw 0;
+    margin: 0;
+    background: #ece2c6;
+    width: 6vw;
+    border: 0;
+    border-radius: 0.3em;
+    cursor: pointer;
+    top: 5vh;
+    left: 3vh;
+}
+
+
+/*El boton de Send cuando se acerca el Cursor*/
+
+.backButtom:hover {
+    background-color: #e0c67b;
+    transition: .5s;
+}
+
+
+/*El boton de Send*/
+
+.dashboard #formconsulta input[type="submit"],
+.dashboard #formconsulta button {
+    padding: 1vh;
+    color: #fff;
+    background: #59431c;
+    width: 6vw;
+    border: 0;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+
+/*El boton de Send cuando se acerca el Cursor*/
+
+.dashboard #formconsulta input[type="submit"]:hover,
+.dashboard #formconsulta button:hover {
+    background-color: #6f5423;
+}
+
+.dashboard #backa #titles {
+    position: absolute;
+    top: 3vh;
+    left: 22.5vw;
+    color: #333;
+    font-weight: 800;
+    font-size: 3vh;
+}
+
+.dashboard #backi #titles {
+    position: absolute;
+    top: 3vh;
+    left: 22.5vw;
+    color: #333;
+    font-weight: 800;
+    font-size: 3vh;
+}
+
+.dashboard #backq h3 {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 2vh;
+}
+
+.dashboard #backq span {
+    position: absolute;
+    margin-top: 4vh;
+    left: 1px;
+    right: 1px;
+    font-size: 500;
+}
+
+#C {
+    margin-top: 5em;
+}
+
+.dashboard #backq #buscarCalificar {
+    position: absolute;
+    left: 1vw;
+    right: 1vw;
+    margin-top: 12vh;
+}
+
+.dashboard #squareA {
+    display: inline-block;
+    border-radius: 0.58vw;
+    height: 10.9vh;
+    width: 15vw;
+    color: black;
+    position: static;
+    background-color: #b67d6f;
+    text-align: center;
+    padding: 2.1vw 2.1vh 2.1vw 2.1vh;
+    /*UP-RIGHT-DOWN-LEFT*/
+    border: 0.2vh solid #ece2c6;
+    margin: 1.46vw 3.82vh 1.46vw 3.82vh;
+    /*UP-RIGHT-DOWN-LEFT*/
+}
+
+.dashboard #squareA:hover {
+    background-color: #9c5e4f;
+    transition: .5s;
+}
+
+.dashboard #squareA spam {
+    position: relative;
+    top: -3vh;
+    left: 0.1vw;
+    font-weight: 650;
+    font-size: 2.5vh;
+}
+
+.dashboard #squareA img {
+    width: 5vw;
+}
+
+.dashboard table {
+    position: static;
+    margin-bottom: 5vh;
+    border-collapse: collapse;
+    border: 0.2vh solid #ece2c6;
+}
+
+.dashboard #pli {
+    margin-left: 20px;
+}
+
+.dashboard th {
+    text-align: center;
+    padding: 0.8vh;
+    border: none;
+    background-color: #59431c;
+    color: #fff;
+}
+
+.dashboard td {
+    text-align: left;
+    padding: 0.8vh;
+    border: none;
+}
+
+.dashboard tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.dashboard tr:nth-child(odd) {
+    background-color: #eae6ca;
+}
+
+
+/* TITLE: Asistente de Actualización de Datos*/
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+header {
+    width: 99.9vw;
+    height: 16vh;
+    overflow: hidden;
+    background: #ece2c6;
+    /*Color Arena*/
+    font-family: 'Lato', sans-serif;
+    border-bottom: 0.35vh solid white;
+}
+
+
+/*
+header .wrapper{
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+*/
+
+header .logo {
+    position: absolute;
+    margin: 0;
+    top: 0.8vh;
+    left: 2.5vw;
+}
+
+header img {
+    width: 7vw;
+}
+
+
+/*
+header .separator{
+  position: absolute;
+  width: 0.11vw;
+  background-color: #7F7D7B;  /*Color Gris*/
+
+
+/*
+  background-color: #52c8fa;
+  height: 12vh;
+  top: 1.8vh;
+  left: 9vw;
+}
+*/
+
+header .textname {
+    margin-left: 2.9vw;
+    position: absolute;
+    left: 10vw;
+    top: -1vh;
+    font-size: 2.7vw;
+    /*color: #54CDEA;*/
+    color: #515151;
+    font-weight: bold;
+}
+
+header .logout {
+    outline: none;
+    /*background-color: #9a9a9a;*/
+    position: absolute;
+    top: 4vh;
+    font-size: 1.1vw;
+    font-weight: 600;
+    right: 1vw;
+    color: #fff;
+    padding: 0vh 1vw 0vh 1vw;
+    margin: 0vh 1vw 0vh 1vw;
+    /*border: 0.1vh solid #eee;*/
+}
+
+#auxPage {
+    background-color: #ece2c6;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#auxPage .headerAux {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    background-color: #333;
+    border-radius: 0.05em;
+}
+
+#auxPage .headerAux img {
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 64px;
+}
+
+#auxPage .headerAux .textname {
+    position: absolute;
+    left: 14vw;
+    top: 0.3vh;
+    color: #54CDEA;
+    font-weight: lighter;
+    font-size: 23px;
+}
+
+#auxPage .headerAux .separator {
+    position: absolute;
+    width: 1px;
+    background-color: #7F7D7B;
+    /*Color Gris*/
+    height: 51px;
+    top: 11px;
+    left: 78px;
+}
+
+#auxPage #editForm {
+    position: absolute;
+    width: 100%;
+    top: 84px;
+    height: auto;
+}
+
+#editForm input[type="text"] {
+    outline: none;
+    padding: 1vh 0vw 1vh 3vw;
+    /*UP-RIGHT-DOWN-LEFT*/
+    display: block;
+    width: 206px;
+    height: 19px;
+    border-radius: 1em;
+    border: 0.1vh solid #eee;
+    margin: 4px 0px 4px 20px;
+    /*UP-RIGHT-DOWN-LEFT*/
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+#editForm select {
+    outline: none;
+    padding: 1vh 0vw 1vh 2.3vw;
+    /*UP-RIGHT-DOWN-LEFT*/
+    display: block;
+    width: 227px;
+    height: 30px;
+    border-radius: 1em;
+    border: 0.1vh solid #eee;
+    margin: 4px 0px 4px 20px;
+    /*UP-RIGHT-DOWN-LEFT*/
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+
+/*El boton de Send*/
+
+#editForm input[type="submit"],
+#editForm input[type="button"] {
+    padding: 0.7vh 3vw 0.7vh 3vw;
+    /*UP-RIGHT-DOWN-LEFT*/
+    color: #fff;
+    background: #59431c;
+    margin: 2vh 2vw 2vh 2vw;
+    /*UP-RIGHT-DOWN-LEFT*/
+    border: 0;
+    border-radius: 0.4em;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 2vw;
+}
+
+#editForm input[type="submit"]:hover,
+#editForm input[type="button"]:hover {
+    background-color: #6f5423;
+}
+
+#editForm .fila {
+    text-align: left;
+    display: inline-block;
+    margin: 2vh 3vw 2vh 3vw;
+    /*UP-RIGHT-DOWN-LEFT*/
+}
+
+#editForm span {
+    color: #6f5423;
+    /*Color Arena Suave*/
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+#editForm input[type="checkbox"] {
+    margin: 2vh 1.1vw 0vh 0vw;
+    /*UP-RIGHT-DOWN-LEFT*/
+}
+
+#editForm h4 {
+    margin: 14px 0px 17px 0px;
+    /*UP-RIGHT-DOWN-LEFT*/
+    color: #59431c;
+    /*Color Arena Grueso*/
+}
+
+#auxPage1 {
+    background-color: #ece2c6;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#auxPage1 .headerAux {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    border-radius: 0.05em;
+}
+
+#auxPage1 .headerAux img {
+    position: absolute;
+    left: 1vw;
+    top: 2vh;
+    width: 45px;
+}
+
+#auxPage1 .headerAux .textname {
+    position: absolute;
+    left: 10vw;
+    top: -4vh;
+    color: #54CDEA;
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+#auxPage1 .headerAux .separator {
+    position: absolute;
+    width: 1px;
+    background-color: #7F7D7B;
+    /*Color Gris*/
+    height: 40px;
+    top: 10px;
+    left: 55px;
+}
+
+#auxPage1 #editForm {
+    position: absolute;
+    width: 100%;
+    top: 22vh;
+    height: auto;
+    margin-top: 3vh;
+}
+
+#auxPage1 #editForm input[type="text"] {
+    outline: none;
+    padding: 1vh 0vw 1vh 3vw;
+    /*UP-RIGHT-DOWN-LEFT*/
+    display: block;
+    width: 206px;
+    height: 19px;
+    border-radius: 1em;
+    border: 0.1vh solid #eee;
+    margin: 4px 0px 4px 17px;
+    /*UP-RIGHT-DOWN-LEFT*/
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+#auxPage1 #editForm select {
+    outline: none;
+    padding: 1vh 0vw 1vh 2.3vw;
+    /*UP-RIGHT-DOWN-LEFT*/
+    display: block;
+    width: 227px;
+    height: 27px;
+    border-radius: 1em;
+    border: 0.1vh solid #eee;
+    margin: 4px 0px 4px 17px;
+    /*UP-RIGHT-DOWN-LEFT*/
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+
+/*El boton de Send*/
+
+#auxPage1 #editForm input[type="submit"],
+#auxPage1 #editForm input[type="button"] {
+    padding: 2vh 3vw 2vh 3vw;
+    /*UP-RIGHT-DOWN-LEFT*/
+    color: #fff;
+    background: #59431c;
+    margin: 2vh 2vw 2vh 2vw;
+    /*UP-RIGHT-DOWN-LEFT*/
+    border: 0;
+    border-radius: 0.4em;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 2vw;
+}
+
+#auxPage1 #editForm input[type="submit"]:hover,
+#auxPage1 #editForm input[type="button"]:hover {
+    background-color: #6f5423;
+}
+
+#auxPage1 #editForm .fila {
+    text-align: left;
+    display: inline-block;
+    margin: 2vh 3vw 2vh 3vw;
+    /*UP-RIGHT-DOWN-LEFT*/
+}
+
+#auxPage1 #editForm span {
+    color: #6f5423;
+    /*Color Arena Suave*/
+    font-weight: 500;
+    font-size: 2.1vw;
+    text-align: left;
+}
+
+#auxPage1 #editForm h4 {
+    margin: 2.5vh 0vw 3vh 0vw;
+    /*UP-RIGHT-DOWN-LEFT*/
+    color: #59431c;
+    /*Color Arena Grueso*/
+}
