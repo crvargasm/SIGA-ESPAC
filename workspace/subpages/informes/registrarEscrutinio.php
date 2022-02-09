@@ -50,7 +50,6 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'];                      //Verificador Unico
         <div class="A">Nombre del Grupo: <strong><em><?php echo $aux->nombreGrupo; ?></em></strong></div>
         <div class="A">Parroquia: <strong><em><?php echo $aux->nombreParroquia; ?></em></strong></div>
 
-
         <form class="etapaModulo pt-1" action="registrarEscrutinio.php?p$b423scer34432yi$unj1232asds34da34shs!???=<?php echo $ID; ?>&a!¡v02ds3ass334de$?!!=<?php echo $ver; ?>" method="POST">
           <div class="form-row my-1 ml-5">
             <div class="form-col col-7">

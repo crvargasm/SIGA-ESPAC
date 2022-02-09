@@ -77,7 +77,7 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
     if ($numerofilas == 0) {
       echo '
         <script>
-          alert("Error al Cargar el Grupo");
+          swal("Upps...", "Algo falló al Cargar el Grupo! \n\n Contactate con Soporte Inmediatamente! (Código Error 205)", "error");
           window.close();
         </script>
       ';
@@ -147,13 +147,21 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
       $numfilas = 0;
       if ($boton != false && ($etapaSelect == 0 || $moduloSelect == 0)) {  //Verifica que NO este Vacia La Consulta
         echo '<script type="text/javascript">      
-              alert("Por favor Selecciona una opción válida e Intenta de Nuevo");
-            </script>';
+                swal("Uppps...", "Por favor Selecciona una Opción Válida e Intenta de Nuevo!","warning");
+                
+              </script>';
         $numfilas = -1;
       } elseif ($etapaSelect != 0 && $moduloSelect != 0) {  //Verifica La Etapa
+
+        /*Buscamos Catequistas que: 
+        1- Esten habilitados para la academia
+        2- Esten Activos en el sistema
+        3- Pertenezcan al Grupo seleccionado ($ID)
+        */
         require '../../database.php';
         $result = $conn->query("SELECT * FROM catequista WHERE habilitarAcademia = true AND estadoCatequista = true AND GrupoTrabajo_idGrupo = '$ID';");
         $numfilas = $result->num_rows;
+
       ?>
         <div class="container-fluid">
           <p class="mb-2 text-danger bg-dark"><em>Módulo en Calificación :<strong><?php echo "$etapaSelect.$moduloSelect"; ?></strong></em></p>
@@ -205,7 +213,7 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
                           } else {
                             echo '
                               <script>
-                                  alert("Los Estudiantes no tienen notas de cursos inferiores registrados, verifica e Intenta de Nuevo");
+                                swal("Uppps...", "Los Estudiantes no tienen notas de cursos inferiores registrados \n\n Verifica e Intenta de Nuevo \n\n (error 202)","error");
                               </script>
                             ';
                             break;
@@ -215,7 +223,7 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
                       } else {
                         echo '
                               <script>
-                                  alert("Error 404 not found :c -> gestionadministrativanotas.php");
+                                  swal("Uppps...", "No se encontraron Catequistas \n\n Verifica que estén habilitados e Intenta de Nuevo \n\n (error 203)","error");
                               </script>
                           ';
                       }
@@ -237,7 +245,7 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
             } elseif ($numfilas == 0 && $boton != false) {
         ?>
           <script>
-            alert("Algo ha Salido Mal, por favor contacta con Servicio Técnico - Error: 'gestionadministrativanotas.php' ");
+            swal("Upps...", "No se han encontrado los alumnos! \n\n Verifica e Intenta de Nuevo! (Código Error 204)", "error");
           </script>
       <?php
             }
@@ -262,7 +270,6 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
 
     }
     var datos = $('#frmajax').serialize();
-    //alert(datos);
     $.ajax({
       type: "POST",
       url: "partials/guardarNotas.php",
@@ -308,9 +315,9 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
                 });
             });
         } else if (r == 3) {
-          swal("Ou...", "El modulo ya había sido consolidado, si deseas actualizar las notas usa el botón \"Guardar Cambios\"", "warning");
+          swal("Ou...", "El módulo ya había sido consolidado \n\n Si deseas Actualizar las Notas usa el botón \"Guardar Cambios\"", "warning");
         } else {
-          swal("Upps... Algo falló!", "Verifica e Intenta de Nuevo :( (Código Error 201)", "error");
+          swal("Upps...", "Algo falló al almacenar! \n\n Contactate con Soporte Inmediatamente! (Código Error 201)", "error");
         }
       }
     });

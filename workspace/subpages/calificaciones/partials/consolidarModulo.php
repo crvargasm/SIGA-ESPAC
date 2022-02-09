@@ -69,11 +69,9 @@ if ($existeModulo->moduloActual > $a->Modulo_idModulo) {     //Existe el siguien
             mysqli_close($conn);
     
             $k = 1;
-            //Si el módulo actual es el mismo que el último de la Etapa 
-        } else if ($a->Modulo_idModulo == $auxilio->maxi) {
+        } else if ($a->Modulo_idModulo == $auxilio->maxi) {     //Si el módulo actual es el mismo que el último de la Etapa 
             $k = 2;
-            //default
-        } else {
+        } else {    //default (Error 201)
             $k = 9;
         }
     }
