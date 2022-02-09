@@ -27,7 +27,6 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'];                      //Verificador Unico
   <div class="workspace">
     <div class="adw">
 
-
       <?php require '../../database.php';
       $result = $conn->query("SELECT infogrupo.*, parroquia.*, modulo.*, etapa.*, count(catequista.idCatequista) from infogrupo, parroquia, modulo, etapa, catequista
                               WHERE infogrupo.Parroquia_idParroquia = parroquia.idParroquia 

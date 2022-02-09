@@ -96,7 +96,7 @@
                   <center><a href="informes/reportexGrupo.php?p$b423scer34432yi$unj1232asds34da34shs!???=<?php echo $IDC; ?>&a!¡v02ds3ass334de$?!!=<?php echo $ver; ?>" target="_blank" onclick="window.open(this.href, this.target, 'width=1080,height=680'); return false;"><input type="radio" name="bt" value=""></a></center>
                 </td>
                 <td>
-                  <center><a href="informes/registrarEscrutinio.php?p$b423scer34432yi$unj1232asds34da34shs!???=<?php echo $IDC; ?>&a!¡v02ds3ass334de$?!!=<?php echo $ver; ?>" target="_blank" onclick="window.open(this.href, this.target, 'width=720,height=520'); return false;"><img src="../images/plus.png" width="35" alt=""></a></center>
+                  <center><a href="informes/registrarEscrutinio.php?p$b423scer34432yi$unj1232asds34da34shs!???=<?php echo $IDC; ?>&a!¡v02ds3ass334de$?!!=<?php echo $ver; ?>" target="_blank" onclick="window.open(this.href, this.target, 'width=720,height=520'); return false;"><img src="../images/plus.png" width="23" alt=""></a></center>
                 </td>
                 </tr>
             <?php
