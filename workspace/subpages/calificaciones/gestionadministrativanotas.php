@@ -353,10 +353,23 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
   }
 
   function cancelar() {
+
     if (cambiosHechos) {
-      if (confirm("¿Seguro desea salir sin guardar cambios?")) {
-        window.close();
-      }
+      swal("Hey...", "¿Seguro desea salir sin guardar cambios?", "info", {
+        buttons: {
+          cancel: "Cancelar",
+          defeat: {
+            text: "Aceptar",
+            value: "si",
+          },
+        },
+      }).then((value) => {
+        switch (value) {
+          case "si":
+            window.close();
+            break;
+        }
+      });
     } else {
       window.close();
     }
