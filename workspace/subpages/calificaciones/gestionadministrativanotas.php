@@ -27,21 +27,30 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
       notasIngresadas[2] = conversor(document.getElementById("P" + i).value);
       notasIngresadas[3] = conversor(document.getElementById("L" + i).value);
       notasIngresadas[4] = conversor(document.getElementById("C-A" + i).value);
+
+      //Calculo promedio
       var notafinal = 0;
       for (var index = 0; index < 5; index++) {
+        // Si al hacer la conversión tengo una nota válida, entonces puedo 
         if (notasIngresadas[index] != -1) {
-          notafinal += notasIngresadas[index];
+          notafinal += notasIngresadas[index]; //Realizo la sumatoria de los valores
         } else {
           document.getElementById("Total" + i).value = "-";
+          cambiosHechos = false;
           return false;
         }
       }
-      notafinal = (notafinal / 5);
-      document.getElementById("Total" + i).value = notafinal;
+      try {
+        notafinal = (notafinal / 5); //Realizo la división en tiempo real
+        document.getElementById("Total" + i).value = notafinal; //Imprimo en pantalla el valor en tiempo real
+      } catch (error) { //Puede ocasionar una división entre 0
+        document.getElementById("Total" + i).value = "-"; //Imprimo en pantalla un "-" en tiempo real
+      }
       cambiosHechos = true;
       return true;
     }
 
+    //Función para convertir de Letras a Números
     function conversor(nota) {
       switch (nota) {
         case "E":
@@ -57,6 +66,7 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
           return 3;
           break;
         case "":
+          return "e";
           break;
         default:
           swal("Ingresa Una Opción Valida:", "Excelente: E - Bueno: B - Deficiente: D", "error");
@@ -134,6 +144,7 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
       </form>
     </div>
 
+    <!--Carga de Matriz de Estudiantes con sus respectivas casillas de Notas-->
     <div id="consulta">
       <?php
       $verifyConsulta = false;
@@ -145,6 +156,7 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
       $etapaSelect = $_POST['lista1'] ?? '';   //Etapa Seleccionada
       $moduloSelect = $_POST['lista2'] ?? '';   //Modulo Seleccionada
       $numfilas = 0;
+      
       if ($boton != false && ($etapaSelect == 0 || $moduloSelect == 0)) {  //Verifica que NO este Vacia La Consulta
         echo '<script type="text/javascript">      
                 swal("Uppps...", "Por favor Selecciona una Opción Válida e Intenta de Nuevo!","warning");
@@ -261,7 +273,10 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
 </html>
 
 <script type="text/javascript">
+
+  //Guardar Notas Parcialmente
   $(document).on("click", "#guardar", function() {
+    /*
     for (var i = 0; i < <?php echo $numfilas; ?>; i++) {
 
       if (!notaModificada(i)) {
@@ -269,6 +284,8 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
       }
 
     }
+    */
+
     var datos = $('#frmajax').serialize();
     $.ajax({
       type: "POST",
@@ -285,13 +302,16 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
     return false;
   });
 
+  //Consolidar Notas y Avanzar al siguiente Módulo
   $(document).on("click", "#consolidar", function() {
     for (var i = 0; i < <?php echo $numfilas; ?>; i++) {
-
+      if (false) {
+        swal("Upps...", "Faltan Notas por Ingresar! \n\n Verifica que no hayan casillas en blanco e intenta de nuevo", "error");
+        return false;
+      }
       if (!notaModificada(i)) {
         return false; //Seguir mirando esta mondá!!!!!
       }
-
     }
     var datos = $('#frmajax').serialize();
     $.ajax({
@@ -300,12 +320,12 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
       data: datos,
       success: function(r) {
         if (r == 1) {
-          swal("Perfecto...", "Modulo consolidado con exito :)", "success")
+          swal("Perfecto...", "Módulo consolidado con éxito :)", "success")
             .then((value) => {
               location.reload();
             });
         } else if (r == 2) {
-          swal("Perfecto...", "Modulo consolidado con exito :)", "success")
+          swal("Perfecto...", "Módulo consolidado con éxito :)", "success")
             .then((value) => {
               swal("Iniciar Etapa...", "Para iniciar la siguiente etapa registra el escrutinio desde el apartado informes :)", "info")
                 .then((willDelete) => {
@@ -352,8 +372,8 @@ $ver = $_GET['a!¡v02ds3ass334de$?!!'] ?? '';   //Verificador Unico de Privacida
     });
   }
 
+  //Salir de la ventana sin guardar cambios
   function cancelar() {
-
     if (cambiosHechos) {
       swal("Hey...", "¿Seguro desea salir sin guardar cambios?", "info", {
         buttons: {

@@ -22,7 +22,7 @@ mysqli_close($conn);
 //          Grupo               >        Hoja Actual
 if ($existeModulo->moduloActual > $a->Modulo_idModulo) {     //Existe el siguiente modulo
     $k = 3;
-} else {                            //No existe el siguiente modulo       
+} else {                            //No existe el siguiente modulo    
     for ($i = 0; $i < $numfilas; $i++) {
         $A = $_POST['A' . $i . ''] ?? '';
         $A_E = $_POST['A-E' . $i . ''] ?? '';
