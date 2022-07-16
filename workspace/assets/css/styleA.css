@@ -30,15 +30,27 @@ body {
 
 .left {
   background: white;
-  box-shadow: -5px 7px 30px 20px rgba(0,0,0,0.35);
+  box-shadow: -5px 7px 30px 20px rgba(0, 0, 0, 0.35);
   height: calc(100% - 40px);
   top: 20px;
   position: relative;
   width: 50%;
-  border-radius: 5px 0px 0px 5px; /*top-left top-right bottom-right bottom-left*/
+  border-radius: 5px 0px 0px 5px;
+  /*top-left top-right bottom-right bottom-left*/
 }
 
-.logo{
+.left2 {
+  background: white;
+  box-shadow: -5px 7px 30px 20px rgba(0, 0, 0, 0.35);
+  height: calc(100% - 40px);
+  top: 20px;
+  left: 5em;
+  position: absolute;
+  width: 75%;
+  border-radius: 5px;
+}
+
+.logo {
   text-align: center;
   margin: 25px 40px 5px 35px;
 }
@@ -65,13 +77,25 @@ body {
   margin: 5px 5px 5px 0px;
 }
 
+.formLogin {
+  font-family: 'Orbitron', sans-serif;
+  color: rgb(206, 206, 206);
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-style: normal;
+  line-height: 1.5;
+  text-align: left;
+  margin: 15px 5px 10px 0px;
+}
+
 .right {
   background: #474A59;
-  box-shadow: 0px 0px 30px 20px rgba(0,0,0,0.20);
+  box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.20);
   color: #F1F1F2;
   position: relative;
   width: 50%;
-  border-radius: 0px 5px 5px 0px; /*top-left top-right bottom-right bottom-left*/
+  border-radius: 0px 5px 5px 0px;
+  /*top-left top-right bottom-right bottom-left*/
 }
 
 svg {
@@ -92,7 +116,7 @@ path {
 }
 
 label {
-  color:  #c2c2c5;
+  color: #c2c2c5;
   display: block;
   font-size: 14px;
   height: 16px;
@@ -103,7 +127,7 @@ label {
 input {
   background: transparent;
   border: 0;
-  color: #f2f2f2;
+  color: rgb(206, 206, 206);
   font-size: 18.5px;
   height: 30px;
   line-height: 30px;
@@ -136,16 +160,16 @@ input::-moz-focus-inner {
   color: #d0d0d2;
 }
 
-.foot{
+.foot {
   position: absolute;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   z-index: 99;
   bottom: 0px;
   text-align: right;
 }
 
-.foot #textfoot{
+.foot #textfoot {
   font-family: 'Orbitron', sans-serif;
   font-size: 12px;
   letter-spacing: 2px;
@@ -156,7 +180,7 @@ input::-moz-focus-inner {
   position: relative;
 }
 
-#separator{
+#separator {
   width: 1px;
   position: relative;
   background-color: #44752c;
@@ -165,13 +189,13 @@ input::-moz-focus-inner {
   margin: 7.5px 2px 2px 2px;
 }
 
-.foot #imagefoot{
+.foot #imagefoot {
   display: inline-block;
   margin-right: 15px;
   margin-left: 2px;
 }
 
-.foot #copy{
+.foot #copy {
   font-family: 'Orbitron', sans-serif;
   font-size: 9px;
   letter-spacing: 1.5px;

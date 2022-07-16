@@ -1,23 +1,44 @@
 <?php
-  session_start();
-  if (isset($_SESSION['user']) && !empty($_SESSION['user'])){
-    //echo "<br/>Sesión Iniciada!!! ";?>
-    <meta http-equiv="refresh" content="1;workspace/subpages/PortalAcademico.php">
-  <?php } ?>
+session_start();
+if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
+  //echo "<br/>Sesión Iniciada!!! ";
+?>
+  <meta http-equiv="refresh" content="1;workspace/subpages/PortalAcademico.php">
+<?php
+}
+?>
 <!DOCTYPE html>
-  <head>
-    <meta charset="utf-8">
-    <title>S.I.G.A. - E.S.P.A.C.</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="workspace/images/SIGA.ico">
-    <link rel="stylesheet" href="workspace/assets/css/style.css">
-    <meta http-equiv="refresh" content="1.5;workspace/login.php">
-  </head>
-  <body id="backindex">
-    <div id="index">
-        <img src="/workspace/images/SIGA.ico" width="220" alt="SIGALogo">
-        <h3>S.I.G.A. - E.S.P.A.C. v1.0Alpha</h3></a>
-        <h2>BIENVENIDO AL S.I.G.A. - ESPAC</h2>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema Integral de Gestión Académica</title>
+  <link rel="stylesheet" href="workspace/assets/css/styleA.css">
+  <link rel="shortcut icon" href="workspace/images/SIGA.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron&display=swap">
+  <script src="libraries/jquery-3.5.1.min.js"></script>
+  <meta http-equiv="refresh" content="1.5;workspace/login.php">
+</head>
+
+<body id="backindex">
+  <div class="page" id="page">
+
+    <div class="container">
+      <div class="left2">
+        <div class="logo"><img src="workspace/images/SIGA.ico" width="150" alt="SIGALogo"></div>
+        <div class="login">SIGA - ESPAC</div>
+        <div class="eula">BIENVENIDO AL SIGA - ESPAC</div>
+      </div>
     </div>
-  </body>
+
+    <div class="foot">
+      <div id="copy">Iglesia de Nuestra Señora de la Candelaria | ©<?php echo date("Y"); ?></div>
+      <div id="textfoot" title="adthos">adthos</div>
+      <div id="separator"></div>
+      <div id="imagefoot" title="adthos"><img src="workspace/images/adthos.png" width="30" alt="adthosLogo"></div>
+    </div>
+
+  </div>
+</body>
+
 </html>
