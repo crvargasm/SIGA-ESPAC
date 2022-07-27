@@ -115,7 +115,7 @@
               for ($i = 0; $i < $numfilas; $i++) {
                 $aux = $result->fetch_object();
                 echo
-                  '
+                '
                   <tr>
                     <td><center>' . $aux->cedulaCiudadania . '</center></td>
                     <td><center>' . $aux->nombreCatequista . " " . $aux->nombre2Catequista . '</center></td>

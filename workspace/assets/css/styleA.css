@@ -9,7 +9,6 @@ body {
 }
 
 .page {
-  /*background: #e2e2e5;*/
   background-image: url("../../images/catedral.jpg");
   background-size: 100%;
   display: flex;

@@ -17,7 +17,7 @@ if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron&display=swap">
   <script src="libraries/jquery-3.5.1.min.js"></script>
-  <meta http-equiv="refresh" content="1.5;workspace/login.php">
+  <meta http-equiv="refresh" content="1;workspace/login.php">
 </head>
 
 <body id="backindex">
