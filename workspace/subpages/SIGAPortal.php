@@ -190,15 +190,15 @@
                                 </div>
 
                                 <div class="row align-items-center justify-content-center">
-                                    <form class="row justify-content-center">
+                                    <form id="getCatequistasAdmin" class="row justify-content-center">
                                         <div class="col-3">
-                                            <input id="apellidoCatequista" type="text" class="form-control" placeholder="Ingrese primer apellido">
+                                            <input id="apellidoCatequista" name="apellidoCatequista" type="text" class="form-control" placeholder="Ingrese apellido">
                                         </div>
                                         <div class="col-3">
-                                            <input id="cedulaCatequista" type="text" class="form-control" placeholder="Ingrese C.C. del Catequista">
+                                            <input id="cedulaCatequista" name="cedulaCatequista" type="text" class="form-control" placeholder="Ingrese C.C. del Catequista">
                                         </div>
                                         <div class="col-4">
-                                            <select class="form-select" aria-label="selectParroquia" name="" id="">
+                                            <select class="form-select" aria-label="selectParroquia" name="parroquia" id="parroquia">
                                                 <option disabled selected value=0>Seleccione la Parroquia del Catequista:</option>
                                                 <?php
                                                 require '../database.php';
