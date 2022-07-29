@@ -167,7 +167,7 @@
                                     </div>
 
                                     <div class="col-auto">
-                                        <button class="btn btn-outline-danger px-3 py-2" onclick="window.location.reload();">
+                                        <button class="btn btn-danger px-3 py-2" onclick="window.location.reload();">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
                                                 <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
                                                 <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
@@ -194,8 +194,8 @@
                                         <div class="col-3">
                                             <input id="apellidoCatequista" name="apellidoCatequista" type="text" class="form-control" placeholder="Ingrese apellido">
                                         </div>
-                                        <div class="col-3">
-                                            <input id="cedulaCatequista" name="cedulaCatequista" type="text" class="form-control" placeholder="Ingrese C.C. del Catequista">
+                                        <div class="col-2">
+                                            <input id="cedulaCatequista" name="cedulaCatequista" type="text" class="form-control" placeholder="C.C. del Catequista">
                                         </div>
                                         <div class="col-4">
                                             <select class="form-select" aria-label="selectParroquia" name="parroquia" id="parroquia">
@@ -212,9 +212,10 @@
                                                 ?>
                                             </select>
                                         </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-secondary" onclick="consultaCatequistasAdmin();">Buscar</button>
-                                            <button type="button" class="btn btn-secondary">Añadir</button>
+                                        <div class="col-3">
+                                            <button type="button" class="btn btn-success" onclick="consultaCatequistasAdmin();">Buscar</button>
+                                            <button type="button" class="btn btn-secondary" onclick="getCatequistasAdmin.reset();cleanCatequistas();">Limpiar</button>
+                                            <a role="button" class="btn btn-primary" target="_blank" href="administracion/newCatequistas.php?a!¡v02ds3ass334de$?!!=1" onclick="window.open(this.href, this.target, 'width=650,height=560'); return false;">Añadir</a>
                                         </div>
                                     </form>
                                 </div>
@@ -229,58 +230,70 @@
                         <!--Panel Coordinadores-->
                         <div class="collapse multi-collapse" data-bs-parent="#panelG" id="adminCoordinadores">
                             <div class="container">
-                                <div class="row align-items-center justify-content-left mt-3">
+
+                                <div class="row align-items-center mt-4 mb-2">
+                                    <div class="col-11">
+                                        <h3>Gestión de Coordinadores</h3s>
+                                    </div>
+
                                     <div class="col-auto">
-                                        <h3>Administración de Información</h3>
+                                        <button class="btn btn-danger px-3 py-2" onclick="window.location.reload();">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                                <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                                                <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+                                            </svg>
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="row align-items-center justify-content-left mt-2">
+
+                                <div class="row align-items-center justify-content-center">
                                     <div class="col-auto">
-                                        <p class="fs-5 mx-3">
-                                            A continuación por favor seleccione el rol que desea administrar:
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="row align-items-center justify-content-left mt-3">
-                                    <div class="col-auto mx-5">
-                                        <div class="row my-5">
-                                            <button type="button" class="btn btn-warning btn-lg">
-                                                <img class="d-inline" src="../images/iconos/catequista.png" alt="Catequista">
-                                                <p class="d-inline fs-4">Catequista</p>
-                                            </button>
-                                        </div>
-                                        <div class="row my-5">
-                                            <button type="button" class="btn btn-warning btn-lg">
-                                                <img class="d-inline" src="../images/iconos/parroquia.png" alt="Catequista">
-                                                <p class="d-inline fs-4">Parroquia</p>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto mx-5">
-                                        <div class="row">
-                                            <button type="button" class="btn btn-warning btn-lg">
-                                                <p class="fs-4">Coordinador</p>
-                                            </button>
-                                        </div>
-                                        <div class="row">
-                                            <button type="button" class="btn btn-warning btn-lg">
-                                                <p class="fs-4">Sacerdote</p>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="row">
-                                            <button type="button" class="btn btn-warning btn-lg">
-                                                <p class="fs-4">Grupo</p>
-                                            </button>
-                                        </div>
-                                        <div class="row">
-                                            <button type="button" class="btn btn-warning btn-lg">
-                                                <p class="fs-4">Diócesis</p>
-                                            </button>
+                                        <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle me-2" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                            </svg>
+                                            A continuación, por favor, ingrese primer apellido, cédula del Catequista o seleccione la parroquia a la que pertenece el Catequista!
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="row align-items-center justify-content-center">
+                                    <form id="getCoordinadoresAdmin" class="row justify-content-center">
+                                        <div class="col-3">
+                                            <input id="apellidoCatequista" name="apellidoCatequista" type="text" class="form-control" placeholder="Ingrese apellido">
+                                        </div>
+                                        <div class="col-2">
+                                            <input id="cedulaCatequista" name="cedulaCatequista" type="text" class="form-control" placeholder="C.C. del Catequista">
+                                        </div>
+                                        <div class="col-4">
+                                            <select class="form-select" aria-label="selectParroquia" name="parroquia" id="parroquia">
+                                                <option disabled selected value=0>Seleccione la Parroquia del Catequista:</option>
+                                                <?php
+                                                require '../database.php';
+                                                $result = $conn->query("SELECT idParroquia, nombreParroquia FROM parroquia");
+                                                $numfilas = $result->num_rows;
+                                                for ($i = 0; $i < $numfilas; $i++) {
+                                                    $aux = $result->fetch_object();
+                                                    echo '<option value="' . $aux->idParroquia . '">Parroquia ' . $aux->nombreParroquia . '</option>';
+                                                }
+                                                mysqli_close($conn);
+                                                ?>
+                                            </select>
+                                        </div>
+                                        <div class="col-3">
+                                            <button type="button" class="btn btn-success" onclick="consultaCatequistasAdmin();">Buscar</button>
+                                            <button type="button" class="btn btn-secondary" onclick="getCatequistasAdmin.reset();cleanCatequistas();">Limpiar</button>
+                                            <a role="button" class="btn btn-primary" target="_blank" href="administracion/newCatequistas.php?a!¡v02ds3ass334de$?!!=1" onclick="window.open(this.href, this.target, 'width=650,height=560'); return false;">Añadir</a>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="row align-items-center justify-content-center" id="consultaCoordinadoresAdminPane">
+
+                                </div>
+
                             </div>
                         </div>
 

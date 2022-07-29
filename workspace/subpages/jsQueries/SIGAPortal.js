@@ -1,3 +1,17 @@
+function cleanCatequistas() {
+    try {
+        prueba.remove();
+    } catch (e) {
+        if (e instanceof ReferenceError) {
+            // Handle error as necessary
+        } else {
+            console.log(e);
+            swal("Upps...", "Algo ha fallado!\n\nIntenta de Nuevo :D", "error");
+            return null;
+        }
+    }
+}
+
 async function getCatequistas() {
     let nombre = '#getCatequistasAdmin';
     let datos = $(nombre).serialize();
@@ -38,17 +52,7 @@ async function getCatequistas() {
 }
 
 async function consultaCatequistasAdmin() {
-    try {
-        prueba.remove();
-    } catch (e) {
-        if (e instanceof ReferenceError) {
-            // Handle error as necessary
-        } else {
-            console.log(e);
-            swal("Upps...", "Algo ha fallado!\n\nIntenta de Nuevo :D", "error");
-            return null;
-        }
-    }
+    cleanCatequistas();
     let data = getCatequistas();
     data.then(function (r) {
         if (r == '\"\"') {
