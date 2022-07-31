@@ -1,6 +1,6 @@
-function cleanCatequistas() {
+function cleanCoordinadores() {
     try {
-        prueba.remove();
+        tablaCoordinadoresAdmin.remove();
     } catch (e) {
         if (e instanceof ReferenceError) {
             // Handle error as necessary
@@ -12,24 +12,24 @@ function cleanCatequistas() {
     }
 }
 
-async function getCatequistas() {
-    let nombre = '#getCatequistasAdmin';
+async function getCoordinadores() {
+    let nombre = '#getCoordinadoresAdmin';
     let datos = $(nombre).serialize();
     let w;
     await $.ajax({
         type: "POST",
-        url: "partials/getCatequistas.php",
+        url: "partials/getCoordinadores.php",
         data: datos,
         success: function (r) {
             w = r;
             switch (r) {
                 case '\"\"':
-                    swal("Catequista no encontrado!", "Intenta de Nuevo :D", "info");
+                    swal("Coordinador no encontrado!", "Intenta de Nuevo :D", "info");
                     return undefined;
                 case '-error':
                     swal({
                         title: "Upps...",
-                        text: "Ha ocurrido un error al conectar con el servidor! Contacta a Soporte :s (Codigo error: SP-Admin-Cat-101)",
+                        text: "Ha ocurrido un error al conectar con el servidor! Contacta a Soporte :s (Codigo error: SP-Admin-Coord-101)",
                         icon: "error",
                         buttons: {
                             cancel: "Cancelar",
@@ -51,9 +51,10 @@ async function getCatequistas() {
     return w;
 }
 
-async function consultaCatequistasAdmin() {
-    cleanCatequistas();
-    let data = getCatequistas();
+async function consultaCoordinadorAdmin() {
+
+    cleanCoordinadores();
+    let data = getCoordinadores();
     data.then(function (r) {
         if (r == '\"\"') {
             // } else if (typeof (r) === 'string') {
@@ -64,7 +65,7 @@ async function consultaCatequistasAdmin() {
             // console.log(t);
             // console.log(t[2]);
             // console.log(t[2]['nombreCatequista']);
-            let htmlText = '<div class="table-responsive my-1"><table id="prueba" class="table table-striped">' +
+            let htmlText = '<div class="table-responsive my-1"><table id="tablaCoordinadoresAdmin" class="table table-striped">' +
                 '<thead>' +
                 '<tr>' +
                 '<th scope="col" class="text-center fst-italic">Documento</th>' +
@@ -120,9 +121,11 @@ async function consultaCatequistasAdmin() {
             }
             htmlText += '</tbody>' + '</table></div>';
 
-            consultaCatequistasAdminPane.insertAdjacentHTML('afterbegin', htmlText);
+            consultaCoordinadoresAdminPane.insertAdjacentHTML('afterbegin', htmlText);
         }
 
+    }).catch(function () {
+        swal("Upps...", "Llena las casillas de búsqueda :D", "info");
     });
 
 }

@@ -80,7 +80,7 @@ if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
               .then((value) => {
                 cambiarboton();
                 document.getElementById("submit").disabled = true;
-                location.href = "subpages/PortalAcademico.php";
+                location.href = "subpages/SIGAPortal.php";
               });
             break;
           case '2':
