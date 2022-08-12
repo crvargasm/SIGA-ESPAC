@@ -111,7 +111,7 @@ async function consultaGruposAdmin() {
                 '<th scope="col" class="text-center fst-italic">Parroco</th>' +
                 '<th scope="col" class="text-center fst-italic">Modulo Actual</th>' +
                 '<th scope="col" class="text-center fst-italic">Estado</th>' +
-                '<th scope="col" class="text-center fst-italic">Ver Grupo</th>' +
+                // '<th scope="col" class="text-center fst-italic">Ver Grupo</th>' +
                 '<th scope="col" class="text-center fst-italic">Calificar</th>' +
                 '<th scope="col" class="text-center fst-italic">Modificar</th>' +
                 '</tr>' +
@@ -152,69 +152,17 @@ async function consultaGruposAdmin() {
                         '</span>' +
                         '</td>';
                 }
+
+                /*Funcionalidad No implementada */
+                // htmlText +=
+                //     '<td class="text-center fw-semibold">' +
+                //     `<a data-bs-toggle="modal" href="#exampleModal">` +
+                //     '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">' +
+                //     '<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />' +
+                //     '</svg>' +
+                //     '</a>' +
+                //     '</td>';
                 htmlText +=
-                    '<td class="text-center fw-semibold">' +
-                    `<a data-bs-toggle="modal" href="#exampleModal">` +
-                    '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">' +
-                    '<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />' +
-                    '</svg>' +
-                    '</a>' +
-
-                    `<!--Modal -->` +
-                    `<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">` +
-                    `<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">` +
-                    `<div class="modal-content">` +
-                    `<div class="modal-header">` +
-                    `<h5 class="modal-title" id="exampleModalLabel">Catequistas del Grupo de Trabajo</h5>` +
-                    `<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>` +
-                    `</div>` +
-                    `<div class="modal-body">` +
-                    `<div class="table-responsive">` +
-                    `<table class="table">` +
-                    `<thead>` +
-                    `<tr>` +
-                    `<th scope="col">#</th>` +
-                    `<th scope="col">First</th>` +
-                    `<th scope="col">Last</th>` +
-                    `<th scope="col">Handle</th>` +
-                    `</tr>` +
-                    `</thead>` +
-                    `<tbody class="table-group-divider">` +
-
-                    `<tr>` +
-                    `<th scope="row">1</th>` +
-                    `<td>Mark</td>` +
-                    `<td>Otto</td>` +
-                    `<td>@mdo</td>` +
-                    `</tr>` +
-
-                    `<tr>` +
-                    `<th scope="row">2</th>` +
-                    `<td>Jacob</td>` +
-                    `<td>Thornton</td>` +
-                    `<td>@fat</td>` +
-                    `</tr>` +
-
-                    `<tr>` +
-                    `<th scope="row">3</th>` +
-                    `<td colspan="2">Larry the Bird</td>` +
-                    `<td>@twitter</td>` +
-                    `</tr>` +
-
-                    `</tbody>` +
-                    `</table>` +
-                    `</div>` +
-                    `</div>` +
-                    `<div class="modal-footer">` +
-                    `<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>` +
-                    `<button type="button" class="btn btn-primary">Save changes</button>` +
-                    `</div>` +
-                    `</div>` +
-                    `</div>` +
-                    `</div>` +
-
-                    '</td>' +
-
                     '<td class="text-center fw-semibold">' +
                     `<a href="calificaciones/advertencia.php?p$b423scer34432yi$unj1232asds34da34shs!???=${t[i]["idGrupo"]}&a!¡v02ds3ass334de$?!!=1" target="_blank" onclick="window.open(this.href, this.target, 'width=1100,height=650'); return false;">` +
                     '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">' +
